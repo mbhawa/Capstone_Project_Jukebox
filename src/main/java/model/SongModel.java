@@ -11,4 +11,7 @@ public class SongModel {
     private String albumName;
     private String genre;
     private String songPath;
+
+    public SongModel() {
+    }
 }
