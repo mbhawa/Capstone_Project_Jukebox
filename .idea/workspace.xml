@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="created a class DatabaseService.java">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="created a parameterised constructor for SongModel.java">
       <change beforePath="$PROJECT_DIR$/src/main/java/model/SongModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/SongModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +101,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663672752056</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="created fields for the class SongModel.java">
+      <created>1663673115430</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663673115430</updated>
+    </task>
+    <task id="LOCAL-00009" summary="created a no args constructor for SongModel.java">
+      <created>1663673171482</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1663673171482</updated>
+    </task>
+    <task id="LOCAL-00010" summary="created a parameterised constructor for SongModel.java">
+      <created>1663673231074</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1663673231074</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,6 +144,9 @@
     <MESSAGE value="created a class SongModel.java" />
     <MESSAGE value="created a class PlaylistModel.java" />
     <MESSAGE value="created a class DatabaseService.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="created a class DatabaseService.java" />
+    <MESSAGE value="created fields for the class SongModel.java" />
+    <MESSAGE value="created a no args constructor for SongModel.java" />
+    <MESSAGE value="created a parameterised constructor for SongModel.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="created a parameterised constructor for SongModel.java" />
   </component>
 </project>
