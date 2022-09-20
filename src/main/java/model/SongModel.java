@@ -6,7 +6,6 @@
 package model;
 
 import java.sql.Time;
-import java.util.Date;
 import java.util.Objects;
 
 public class SongModel {
@@ -29,7 +28,7 @@ public class SongModel {
         this.songId = songId;
         this.songName = songName;
         this.albumName = albumName;
-        this.duration=duration;
+        this.duration = duration;
         this.genre = genre;
         this.songPath = songPath;
     }
@@ -87,12 +86,12 @@ public class SongModel {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SongModel songModel = (SongModel) o;
-        return songId == songModel.songId && Objects.equals(songName, songModel.songName) && Objects.equals(albumName, songModel.albumName)&& Objects.equals(duration, songModel.duration) && Objects.equals(genre, songModel.genre) && Objects.equals(songPath, songModel.songPath);
+        return songId == songModel.songId && Objects.equals(songName, songModel.songName) && Objects.equals(albumName, songModel.albumName) && Objects.equals(duration, songModel.duration) && Objects.equals(genre, songModel.genre) && Objects.equals(songPath, songModel.songPath);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(songId, songName, albumName,duration, genre, songPath);
+        return Objects.hash(songId, songName, albumName, duration, genre, songPath);
     }
 
     @Override

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="refactored JukeboxImpl.java to Main.java">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="created a class Main" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -187,7 +185,42 @@
       <option name="project" value="LOCAL" />
       <updated>1663674870256</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="refactored JukeboxImpl.java to Main.java">
+      <created>1663677379822</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1663677379822</updated>
+    </task>
+    <task id="LOCAL-00021" summary="refactored JukeboxImpl.java to Main.java">
+      <created>1663677424385</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1663677424385</updated>
+    </task>
+    <task id="LOCAL-00022" summary="refactored JukeboxImpl.java to Main.java">
+      <created>1663677442553</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1663677442553</updated>
+    </task>
+    <task id="LOCAL-00023" summary="added fields to PlaylistModel.java">
+      <created>1663677558288</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1663677558288</updated>
+    </task>
+    <task id="LOCAL-00024" summary="created a class Main">
+      <created>1663677635697</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1663677635697</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -219,6 +252,9 @@
     <MESSAGE value="created a class AudioPlayerRepository.java" />
     <MESSAGE value="created a class DatabaseService.java" />
     <MESSAGE value="created a class MusicPlayerService.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="created a class MusicPlayerService.java" />
+    <MESSAGE value="refactored JukeboxImpl.java to Main.java" />
+    <MESSAGE value="added fields to PlaylistModel.java" />
+    <MESSAGE value="created a class Main" />
+    <option name="LAST_COMMIT_MESSAGE" value="created a class Main" />
   </component>
 </project>
