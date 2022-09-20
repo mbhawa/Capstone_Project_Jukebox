@@ -6,4 +6,9 @@
 package model;
 
 public class SongModel {
+    private int songId;
+    private String songName;
+    private String albumName;
+    private String genre;
+    private String songPath;
 }
