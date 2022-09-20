@@ -5,6 +5,8 @@
  */
 package model;
 
+import java.util.Objects;
+
 public class PlaylistModel {
     private int playlistId;
     private String playlistName;
@@ -31,5 +33,18 @@ public class PlaylistModel {
 
     public void setPlaylistName(String playlistName) {
         this.playlistName = playlistName;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PlaylistModel that = (PlaylistModel) o;
+        return playlistId == that.playlistId && Objects.equals(playlistName, that.playlistName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(playlistId, playlistName);
     }
 }
