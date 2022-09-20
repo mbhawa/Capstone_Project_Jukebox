@@ -5,6 +5,8 @@
  */
 package model;
 
+import java.util.Objects;
+
 public class SongModel {
     private int songId;
     private String songName;
@@ -65,5 +67,18 @@ public class SongModel {
 
     public void setSongPath(String songPath) {
         this.songPath = songPath;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SongModel songModel = (SongModel) o;
+        return songId == songModel.songId && Objects.equals(songName, songModel.songName) && Objects.equals(albumName, songModel.albumName) && Objects.equals(genre, songModel.genre) && Objects.equals(songPath, songModel.songPath);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(songId, songName, albumName, genre, songPath);
     }
 }
