@@ -5,12 +5,15 @@
  */
 package model;
 
+import java.sql.Time;
+import java.util.Date;
 import java.util.Objects;
 
 public class SongModel {
     private int songId;
     private String songName;
     private String albumName;
+    private Time duration;
     private String genre;
     private String songPath;
 
@@ -20,11 +23,13 @@ public class SongModel {
     public SongModel(int songId,
                      String songName,
                      String albumName,
+                     Time duration,
                      String genre,
                      String songPath) {
         this.songId = songId;
         this.songName = songName;
         this.albumName = albumName;
+        this.duration=duration;
         this.genre = genre;
         this.songPath = songPath;
     }
@@ -53,6 +58,14 @@ public class SongModel {
         this.albumName = albumName;
     }
 
+    public Time getDuration() {
+        return duration;
+    }
+
+    public void setDuration(Time duration) {
+        this.duration = duration;
+    }
+
     public String getGenre() {
         return genre;
     }
@@ -74,12 +87,12 @@ public class SongModel {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SongModel songModel = (SongModel) o;
-        return songId == songModel.songId && Objects.equals(songName, songModel.songName) && Objects.equals(albumName, songModel.albumName) && Objects.equals(genre, songModel.genre) && Objects.equals(songPath, songModel.songPath);
+        return songId == songModel.songId && Objects.equals(songName, songModel.songName) && Objects.equals(albumName, songModel.albumName)&& Objects.equals(duration, songModel.duration) && Objects.equals(genre, songModel.genre) && Objects.equals(songPath, songModel.songPath);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(songId, songName, albumName, genre, songPath);
+        return Objects.hash(songId, songName, albumName,duration, genre, songPath);
     }
 
     @Override
@@ -88,6 +101,7 @@ public class SongModel {
                 "songId=" + songId +
                 ", songName='" + songName + '\'' +
                 ", albumName='" + albumName + '\'' +
+                ", duration='" + duration + '\'' +
                 ", genre='" + genre + '\'' +
                 ", songPath='" + songPath + '\'' +
                 '}';

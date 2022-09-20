@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="created a class AudioPlayerRepository.java" />
+    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="created a class DatabaseService.java">
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/SongModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/SongModel.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -184,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663674252805</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="created a class DatabaseService.java">
+      <created>1663674472275</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1663674472275</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -204,7 +213,6 @@
     <MESSAGE value="added the junit dependency" />
     <MESSAGE value="added the mysql dependency" />
     <MESSAGE value="created a class SongModel.java" />
-    <MESSAGE value="created a class DatabaseService.java" />
     <MESSAGE value="created fields for the class SongModel.java" />
     <MESSAGE value="created a no args constructor for SongModel.java" />
     <MESSAGE value="created a parameterised constructor for SongModel.java" />
@@ -215,6 +223,7 @@
     <MESSAGE value="created a new class SongRepository.java" />
     <MESSAGE value="added a new class MusicPlayerRepository.java" />
     <MESSAGE value="created a class AudioPlayerRepository.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="created a class AudioPlayerRepository.java" />
+    <MESSAGE value="created a class DatabaseService.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="created a class DatabaseService.java" />
   </component>
 </project>
