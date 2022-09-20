@@ -11,4 +11,9 @@ public class PlaylistModel {
 
     public PlaylistModel() {
     }
+
+    public PlaylistModel(int playlistId, String playlistName) {
+        this.playlistId = playlistId;
+        this.playlistName = playlistName;
+    }
 }
