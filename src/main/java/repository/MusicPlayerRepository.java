@@ -5,5 +5,5 @@
  */
 package repository;
 
-public class Song {
+public class MusicPlayerRepository {
 }
