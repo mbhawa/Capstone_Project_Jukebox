@@ -81,4 +81,15 @@ public class SongModel {
     public int hashCode() {
         return Objects.hash(songId, songName, albumName, genre, songPath);
     }
+
+    @Override
+    public String toString() {
+        return "SongModel{" +
+                "songId=" + songId +
+                ", songName='" + songName + '\'' +
+                ", albumName='" + albumName + '\'' +
+                ", genre='" + genre + '\'' +
+                ", songPath='" + songPath + '\'' +
+                '}';
+    }
 }
