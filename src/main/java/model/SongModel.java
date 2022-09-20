@@ -14,4 +14,16 @@ public class SongModel {
 
     public SongModel() {
     }
+
+    public SongModel(int songId,
+                     String songName,
+                     String albumName,
+                     String genre,
+                     String songPath) {
+        this.songId = songId;
+        this.songName = songName;
+        this.albumName = albumName;
+        this.genre = genre;
+        this.songPath = songPath;
+    }
 }
