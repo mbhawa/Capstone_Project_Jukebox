@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="created a class JukeboxImpl.java" />
+    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="refactored JukeboxImpl.java to Main.java">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +20,9 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -41,11 +45,6 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Mridul\IdeaProjects\Jukebos_Project\src\main\resources\sql_queries" />
-    </key>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -188,35 +187,7 @@
       <option name="project" value="LOCAL" />
       <updated>1663674870256</updated>
     </task>
-    <task id="LOCAL-00020" summary="created a file jukebox_database_queries.sql">
-      <created>1663675273011</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1663675273011</updated>
-    </task>
-    <task id="LOCAL-00021" summary="created a package songs_list in resources">
-      <created>1663675389610</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1663675389610</updated>
-    </task>
-    <task id="LOCAL-00022" summary="created a class JukeboxImpl.java">
-      <created>1663675542885</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1663675542885</updated>
-    </task>
-    <task id="LOCAL-00023" summary="created a class JukeboxImpl.java">
-      <created>1663675678200</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1663675678200</updated>
-    </task>
-    <option name="localTasksCounter" value="24" />
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,9 +219,6 @@
     <MESSAGE value="created a class AudioPlayerRepository.java" />
     <MESSAGE value="created a class DatabaseService.java" />
     <MESSAGE value="created a class MusicPlayerService.java" />
-    <MESSAGE value="created a file jukebox_database_queries.sql" />
-    <MESSAGE value="created a package songs_list in resources" />
-    <MESSAGE value="created a class JukeboxImpl.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="created a class JukeboxImpl.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="created a class MusicPlayerService.java" />
   </component>
 </project>
