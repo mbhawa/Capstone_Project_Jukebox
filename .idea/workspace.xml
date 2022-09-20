@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="created a parameterised constructor for SongModel.java">
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/SongModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/SongModel.java" afterDir="false" />
-    </list>
+    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="added toString method" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,7 +120,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663673231074</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="created the getter and setter methods for the fields">
+      <created>1663673263737</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1663673263737</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added the equals and hash code method">
+      <created>1663673331240</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1663673331240</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added toString method">
+      <created>1663673369052</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1663673369052</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,6 +166,9 @@
     <MESSAGE value="created fields for the class SongModel.java" />
     <MESSAGE value="created a no args constructor for SongModel.java" />
     <MESSAGE value="created a parameterised constructor for SongModel.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="created a parameterised constructor for SongModel.java" />
+    <MESSAGE value="created the getter and setter methods for the fields" />
+    <MESSAGE value="added the equals and hash code method" />
+    <MESSAGE value="added toString method" />
+    <option name="LAST_COMMIT_MESSAGE" value="added toString method" />
   </component>
 </project>
