@@ -6,4 +6,6 @@
 package model;
 
 public class PlaylistModel {
+    private int playlistId;
+    private String playlistName;
 }
