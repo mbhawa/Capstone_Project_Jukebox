@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="created a parameterised constructor" />
+    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="added the toString method">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql_queries/jukebox_database_queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql_queries/jukebox_database_queries.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,17 +39,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -238,7 +241,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663691403593</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="created the getter and setter methods for the fields">
+      <created>1663691485273</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1663691485273</updated>
+    </task>
+    <task id="LOCAL-00028" summary="created the equals and hashcode method">
+      <created>1663691515924</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1663691515924</updated>
+    </task>
+    <task id="LOCAL-00029" summary="added the toString method">
+      <created>1663691532103</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1663691532103</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -261,7 +285,6 @@
     <MESSAGE value="created fields for the class SongModel.java" />
     <MESSAGE value="created a no args constructor for SongModel.java" />
     <MESSAGE value="created a parameterised constructor for SongModel.java" />
-    <MESSAGE value="created the getter and setter methods for the fields" />
     <MESSAGE value="added the equals and hash code method" />
     <MESSAGE value="added toString method" />
     <MESSAGE value="created a class PlaylistModel.java" />
@@ -275,6 +298,9 @@
     <MESSAGE value="created a class Main" />
     <MESSAGE value="created a no args constructor" />
     <MESSAGE value="created a parameterised constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="created a parameterised constructor" />
+    <MESSAGE value="created the getter and setter methods for the fields" />
+    <MESSAGE value="created the equals and hashcode method" />
+    <MESSAGE value="added the toString method" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the toString method" />
   </component>
 </project>
