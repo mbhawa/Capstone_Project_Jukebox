@@ -50,9 +50,6 @@ public class PlaylistModel {
 
     @Override
     public String toString() {
-        return "PlaylistModel{" +
-                "playlistId=" + playlistId +
-                ", playlistName='" + playlistName + '\'' +
-                '}';
+        return "PlaylistModel{" + "playlistId=" + playlistId + ", playlistName='" + playlistName + '\'' + '}';
     }
 }

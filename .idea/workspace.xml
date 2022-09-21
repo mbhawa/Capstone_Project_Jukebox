@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="added a query to create a database `jukebox`" />
+    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="added a query to create a table song">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/0/207b578146446a5f5cb4f900a7dc0253ae35d43b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/38960a8006ef41148cc79cdeeeba291ae1473388" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/5/55bddf07f8df60a3c975ad80484505c9ca271d4b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/58aede2f49011ec46881caa970d05e07cb68f2b0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8aa9bc3237575f7b108e0cb87445604828bd93dd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/99c5cd87280e679a5edd577613b53efbe7276250" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c7377ade425577aeea773214e8e79c1407313d76" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/c/fc5349376b37426cbad233a2ff12df8af6f73dd7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/PlaylistModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/PlaylistModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/SongModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/SongModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql_queries/jukebox_database_queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql_queries/jukebox_database_queries.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -266,7 +281,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663733855306</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="added a query to use database `jukebox`">
+      <created>1663733894043</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1663733894043</updated>
+    </task>
+    <task id="LOCAL-00032" summary="added a query to create a table song">
+      <created>1663733989975</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1663733989975</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -281,8 +310,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial commit" />
-    <MESSAGE value="changed the maven compiler target and source version from 18 to 11" />
     <MESSAGE value="added the junit dependency" />
     <MESSAGE value="added the mysql dependency" />
     <MESSAGE value="created a class SongModel.java" />
@@ -306,6 +333,8 @@
     <MESSAGE value="created the equals and hashcode method" />
     <MESSAGE value="added the toString method" />
     <MESSAGE value="added a query to create a database `jukebox`" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a query to create a database `jukebox`" />
+    <MESSAGE value="added a query to use database `jukebox`" />
+    <MESSAGE value="added a query to create a table song" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a query to create a table song" />
   </component>
 </project>

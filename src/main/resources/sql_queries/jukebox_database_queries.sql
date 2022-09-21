@@ -13,3 +13,4 @@ create table if not exists `song_details`(
 `genre` varchar(20) not null,
 `song_path` varchar(60) not null
 );
+

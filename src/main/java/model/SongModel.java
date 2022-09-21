@@ -19,12 +19,7 @@ public class SongModel {
     public SongModel() {
     }
 
-    public SongModel(int songId,
-                     String songName,
-                     String albumName,
-                     Time duration,
-                     String genre,
-                     String songPath) {
+    public SongModel(int songId, String songName, String albumName, Time duration, String genre, String songPath) {
         this.songId = songId;
         this.songName = songName;
         this.albumName = albumName;
@@ -96,13 +91,6 @@ public class SongModel {
 
     @Override
     public String toString() {
-        return "SongModel{" +
-                "songId=" + songId +
-                ", songName='" + songName + '\'' +
-                ", albumName='" + albumName + '\'' +
-                ", duration='" + duration + '\'' +
-                ", genre='" + genre + '\'' +
-                ", songPath='" + songPath + '\'' +
-                '}';
+        return "SongModel{" + "songId=" + songId + ", songName='" + songName + '\'' + ", albumName='" + albumName + '\'' + ", duration='" + duration + '\'' + ", genre='" + genre + '\'' + ", songPath='" + songPath + '\'' + '}';
     }
 }
