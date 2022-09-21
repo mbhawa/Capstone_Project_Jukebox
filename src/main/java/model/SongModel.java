@@ -9,6 +9,7 @@ import java.sql.Time;
 import java.util.Objects;
 
 public class SongModel {
+    //create the fields for the SongModel class
     private int songId;
     private String songName;
     private String albumName;
@@ -16,6 +17,7 @@ public class SongModel {
     private String genre;
     private String songPath;
 
+    //create a no args and a parameterised constructor
     public SongModel() {
     }
 
@@ -28,6 +30,7 @@ public class SongModel {
         this.songPath = songPath;
     }
 
+    //create getter and setter methods for the fields
     public int getSongId() {
         return songId;
     }
@@ -76,6 +79,7 @@ public class SongModel {
         this.songPath = songPath;
     }
 
+    //override the equals and hashcode methods
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -89,6 +93,7 @@ public class SongModel {
         return Objects.hash(songId, songName, albumName, duration, genre, songPath);
     }
 
+    //override the toString method
     @Override
     public String toString() {
         return "SongModel{" + "songId=" + songId + ", songName='" + songName + '\'' + ", albumName='" + albumName + '\'' + ", duration='" + duration + '\'' + ", genre='" + genre + '\'' + ", songPath='" + songPath + '\'' + '}';

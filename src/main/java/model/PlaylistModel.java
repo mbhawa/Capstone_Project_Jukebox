@@ -8,9 +8,11 @@ package model;
 import java.util.Objects;
 
 public class PlaylistModel {
+    //create the fields for the PlaylistModel class
     private int playlistId;
     private String playlistName;
 
+    //create a no args and a parameterised constructor
     public PlaylistModel() {
     }
 
@@ -19,6 +21,7 @@ public class PlaylistModel {
         this.playlistName = playlistName;
     }
 
+    //create getter and setter methods for the fields
     public int getPlaylistId() {
         return playlistId;
     }
@@ -35,6 +38,7 @@ public class PlaylistModel {
         this.playlistName = playlistName;
     }
 
+    //override the equals and hashcode methods
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -48,6 +52,7 @@ public class PlaylistModel {
         return Objects.hash(playlistId, playlistName);
     }
 
+    //override the toString method
     @Override
     public String toString() {
         return "PlaylistModel{" + "playlistId=" + playlistId + ", playlistName='" + playlistName + '\'' + '}';

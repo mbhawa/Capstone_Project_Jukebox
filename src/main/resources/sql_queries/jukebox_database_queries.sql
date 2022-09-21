@@ -13,6 +13,7 @@ create table if not exists `song_details`(
 `genre` varchar(20) not null,
 `song_path` varchar(60) not null
 );
+
 -- create a table `playlist_details`
 create table if not exists `playlist_details`(
 `playlist_id` int not null primary key,

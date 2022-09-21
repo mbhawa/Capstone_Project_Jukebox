@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="created a method for connecting the databse">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="aaded a query to create a table `playlist_details`">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs_list/Gangsta'sParadise.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs_list/HallOfFame.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs_list/HeatWaves.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs_list/Nights.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs_list/PeekyBlinderTheme.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs_list/SeeYouAgain.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/sql_queries/jukebox_database_queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql_queries/jukebox_database_queries.sql" afterDir="false" />
     </list>
@@ -45,12 +50,33 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mridul/IdeaProjects/Capstone_Project_Jukebox/src/main/resources/songs_list&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mridul\IdeaProjects\Capstone_Project_Jukebox\src\main\resources\songs_list" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="capstone_project_jukebox" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="capstone_project_jukebox" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -305,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663736724682</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="aaded a query to create a table `playlist_details`">
+      <created>1663738255528</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1663738255528</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -320,7 +353,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created fields for the class SongModel.java" />
     <MESSAGE value="created a no args constructor for SongModel.java" />
     <MESSAGE value="created a parameterised constructor for SongModel.java" />
     <MESSAGE value="added the equals and hash code method" />
@@ -345,6 +377,7 @@
     <MESSAGE value="created the fields for the DatabaseService.java" />
     <MESSAGE value="added a constructor for the Connection" />
     <MESSAGE value="created a method for connecting the databse" />
-    <option name="LAST_COMMIT_MESSAGE" value="created a method for connecting the databse" />
+    <MESSAGE value="aaded a query to create a table `playlist_details`" />
+    <option name="LAST_COMMIT_MESSAGE" value="aaded a query to create a table `playlist_details`" />
   </component>
 </project>
