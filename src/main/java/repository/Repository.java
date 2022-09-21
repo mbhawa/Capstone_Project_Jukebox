@@ -11,8 +11,10 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface Repository<T>{
-    List<Song> searchBySongName(List<Song> songList, String songName) throws SQLException;
-    List<Song> searchByArtistName(String artistName);
-    List<Song> searchByGenre (String genre);
     List<Song> displayAllSongs() throws SQLException;
+    List<Song> searchByAlbumName(List<Song> songList, String albumName) throws SQLException;
+    List<Song> searchByArtistName(String artistName);
+    List<Song> searchBySongName(List<Song> songList, String songName) throws SQLException
+
+    List<Song> searchByGenre (String genre);
 }

@@ -19,7 +19,8 @@ public class Song {
     private String songPath;
 
     //create a no args and a parameterised constructor
-    public Song(int anInt, String string, double aDouble, String resultSetString, String setString, String s) {
+
+    public Song() {
     }
 
     public Song(int songId, String songName, String artistName, String albumName, Time duration, String genre, String songPath) {
