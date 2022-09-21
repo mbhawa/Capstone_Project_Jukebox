@@ -5,5 +5,28 @@
  */
 package repository;
 
-public class SongRepository {
+import model.SongModel;
+
+import java.util.List;
+
+public class SongRepository implements SongRepositoryInterface{
+    @Override
+    public List<SongModel> displayAllSongs() {
+        return null;
+    }
+
+    @Override
+    public List<SongModel> searchBySongName(String songName) {
+        return null;
+    }
+
+    @Override
+    public List<SongModel> searchByArtistName(String artist) {
+        return null;
+    }
+
+    @Override
+    public List<SongModel> searchByGenre(String genre) {
+        return null;
+    }
 }

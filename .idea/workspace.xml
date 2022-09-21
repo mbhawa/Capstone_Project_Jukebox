@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="created an interface SongRepositoryInterface.java">
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/SongRepositoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaces/SongRepositoryInterface.java" afterDir="false" />
+    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="created interface for the AudioPlayerRepository and implemented them">
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/AudioPlayerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/AudioPlayerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/SongRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,21 +47,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "last_opened_file_path": "C:/Users/Mridul/IdeaProjects/capstone-project-jukebox",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mridul/IdeaProjects/capstone-project-jukebox&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Mridul\IdeaProjects\Capstone_Project_Jukebox\src\main\resources\songs_list" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager">
@@ -360,7 +364,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663744702047</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="created the interfaces of the methods to be implemented in SongRepository">
+      <created>1663745083772</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1663745083772</updated>
+    </task>
+    <task id="LOCAL-00041" summary="created a class AudioPlayerRepositoryInterface.java">
+      <created>1663745135802</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1663745135802</updated>
+    </task>
+    <task id="LOCAL-00042" summary="created interface for the AudioPlayerRepository and implemented them">
+      <created>1663749386911</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1663749386911</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -375,9 +400,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added toString method" />
-    <MESSAGE value="created a class PlaylistModel.java" />
-    <MESSAGE value="created a new class SongRepository.java" />
     <MESSAGE value="added a new class MusicPlayerRepository.java" />
     <MESSAGE value="created a class AudioPlayerRepository.java" />
     <MESSAGE value="created a class DatabaseService.java" />
@@ -400,6 +422,9 @@
     <MESSAGE value="refactored the model classes" />
     <MESSAGE value="refactored the DatabaseService.java class" />
     <MESSAGE value="created an interface SongRepositoryInterface.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="created an interface SongRepositoryInterface.java" />
+    <MESSAGE value="created the interfaces of the methods to be implemented in SongRepository" />
+    <MESSAGE value="created a class AudioPlayerRepositoryInterface.java" />
+    <MESSAGE value="created interface for the AudioPlayerRepository and implemented them" />
+    <option name="LAST_COMMIT_MESSAGE" value="created interface for the AudioPlayerRepository and implemented them" />
   </component>
 </project>
