@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="added a constructor for the Connection">
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DatabaseService.java" afterDir="false" />
+    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="created a method for connecting the databse">
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql_queries/jukebox_database_queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql_queries/jukebox_database_queries.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663736585820</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="created a method for connecting the databse">
+      <created>1663736724682</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1663736724682</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -311,7 +320,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created a class SongModel.java" />
     <MESSAGE value="created fields for the class SongModel.java" />
     <MESSAGE value="created a no args constructor for SongModel.java" />
     <MESSAGE value="created a parameterised constructor for SongModel.java" />
@@ -336,6 +344,7 @@
     <MESSAGE value="added a query to create a table song" />
     <MESSAGE value="created the fields for the DatabaseService.java" />
     <MESSAGE value="added a constructor for the Connection" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a constructor for the Connection" />
+    <MESSAGE value="created a method for connecting the databse" />
+    <option name="LAST_COMMIT_MESSAGE" value="created a method for connecting the databse" />
   </component>
 </project>
