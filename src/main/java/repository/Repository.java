@@ -11,8 +11,8 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface Repository<T>{
-    List<Song> searchBySongName(String songName) throws SQLException;
+    List<Song> searchBySongName(List<Song> songList, String songName) throws SQLException;
     List<Song> searchByArtistName(String artistName);
     List<Song> searchByGenre (String genre);
-    List<Song> displayAllSongs(List<Song> songList, String name) throws SQLException;
+    List<Song> displayAllSongs() throws SQLException;
 }

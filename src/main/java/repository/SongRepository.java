@@ -17,21 +17,21 @@ public class SongRepository implements Repository<Song> {
     DatabaseService databaseService;
     //create a method to display all the songs
     @Override
-    public List<Song> displayAllSongs(List<Song> songList, String name) throws SQLException {
+    public List<Song> displayAllSongs() throws SQLException {
+
+    }
+
+    @Override
+    public List<Song> searchBySongName(List<Song> songList, String songName) throws SQLException {
         Connection connection=databaseService.getConnection();
         List<Song> songList1= new ArrayList<Song>();
         for(Song song : songList) {
             System.out.println(song.getSongName());
-            if(song.getSongName().equalsIgnoreCase(name)){
+            if(song.getSongName().equalsIgnoreCase(songName)){
                 songList1.add(song);
             }
         }
         return songList1;
-    }
-
-    @Override
-    public List<Song> searchBySongName(String songName) throws SQLException {
-        return null;
     }
 
     @Override
