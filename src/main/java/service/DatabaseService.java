@@ -14,14 +14,14 @@ public class DatabaseService {
     private static final String URL="jdbc:mysql://localhost:3306/jukebox";
     private static final String USERNAME="root";
     private static final String PASSWORD="rootpassword";
-    private Connection connection;
+    private static Connection connection;
 
     //create constructor for the connection
     public DatabaseService() {
         this.connection = null;
     }
     //create getter method for the field
-    public Connection getConnection() {
+    public static Connection getConnection() {
         return connection;
     }
 

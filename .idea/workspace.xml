@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="added queries to add values to the song_details table">
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="added method to display all the songs">
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/SongRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DatabaseService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,13 +89,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663669937929</updated>
-    </task>
-    <task id="LOCAL-00001" summary="initial commit">
-      <created>1663669958090</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1663669958090</updated>
     </task>
     <task id="LOCAL-00002" summary="changed the maven compiler target and source version from 18 to 11">
       <created>1663670199290</created>
@@ -430,7 +419,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663762553644</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="created a class Repository.java">
+      <created>1663778846064</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1663778846064</updated>
+    </task>
+    <task id="LOCAL-00050" summary="added method to display all the songs">
+      <created>1663782260946</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1663782260946</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -445,8 +448,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created a class MusicPlayerService.java" />
-    <MESSAGE value="refactored JukeboxImpl.java to Main.java" />
     <MESSAGE value="added fields to PlaylistModel.java" />
     <MESSAGE value="created a class Main" />
     <MESSAGE value="created a no args constructor" />
@@ -470,6 +471,8 @@
     <MESSAGE value="refactored the SongModel" />
     <MESSAGE value="refactored the DatabaseService.java" />
     <MESSAGE value="added queries to add values to the song_details table" />
-    <option name="LAST_COMMIT_MESSAGE" value="added queries to add values to the song_details table" />
+    <MESSAGE value="created a class Repository.java" />
+    <MESSAGE value="added method to display all the songs" />
+    <option name="LAST_COMMIT_MESSAGE" value="added method to display all the songs" />
   </component>
 </project>
