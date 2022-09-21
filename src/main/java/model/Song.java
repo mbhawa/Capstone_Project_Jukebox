@@ -8,7 +8,7 @@ package model;
 import java.sql.Time;
 import java.util.Objects;
 
-public class SongModel {
+public class Song {
     //create the fields for the SongModel class
     private int songId;
     private String songName;
@@ -19,14 +19,14 @@ public class SongModel {
     private String songPath;
 
     //create a no args and a parameterised constructor
-    public SongModel() {
+    public Song() {
     }
 
-    public SongModel(int songId, String songName, String artistName, String albumName, Time duration, String genre, String songPath) {
+    public Song(int songId, String songName, String artistName, String albumName, Time duration, String genre, String songPath) {
         this.songId = songId;
         this.songName = songName;
         this.artistName = artistName;
-        this.albumName=albumName;
+        this.albumName = albumName;
         this.duration = duration;
         this.genre = genre;
         this.songPath = songPath;
@@ -94,8 +94,8 @@ public class SongModel {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        SongModel songModel = (SongModel) o;
-        return songId == songModel.songId && Objects.equals(songName, songModel.songName) && Objects.equals(artistName, songModel.artistName) && Objects.equals(albumName, songModel.albumName) && Objects.equals(duration, songModel.duration) && Objects.equals(genre, songModel.genre) && Objects.equals(songPath, songModel.songPath);
+        Song song = (Song) o;
+        return songId == song.songId && Objects.equals(songName, song.songName) && Objects.equals(artistName, song.artistName) && Objects.equals(albumName, song.albumName) && Objects.equals(duration, song.duration) && Objects.equals(genre, song.genre) && Objects.equals(songPath, song.songPath);
     }
 
     @Override
@@ -106,6 +106,6 @@ public class SongModel {
     //override the toString method
     @Override
     public String toString() {
-        return "SongModel{" + "songId=" + songId + ", songName='" + songName + '\'' + "artistName='" + artistName+ '\''+ ", albumName='" + albumName + '\'' + ", duration='" + duration + '\'' + ", genre='" + genre + '\'' + ", songPath='" + songPath + '\'' + '}';
+        return "SongModel{" + "songId=" + songId + ", songName='" + songName + '\'' + "artistName='" + artistName + '\'' + ", albumName='" + albumName + '\'' + ", duration='" + duration + '\'' + ", genre='" + genre + '\'' + ", songPath='" + songPath + '\'' + '}';
     }
 }

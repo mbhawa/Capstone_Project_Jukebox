@@ -6,19 +6,25 @@
 package model;
 
 import java.util.Objects;
+import java.util.Set;
+import java.util.TreeSet;
 
-public class PlaylistModel {
+public class Playlist {
     //create the fields for the PlaylistModel class
     private int playlistId;
     private String playlistName;
 
+    private Set<Song> song;
+
     //create a no args and a parameterised constructor
-    public PlaylistModel() {
+    public Playlist() {
+        song = new TreeSet<>();
     }
 
-    public PlaylistModel(int playlistId, String playlistName) {
+    public Playlist(int playlistId, String playlistName, Set<Song> song) {
         this.playlistId = playlistId;
         this.playlistName = playlistName;
+        this.song = song;
     }
 
     //create getter and setter methods for the fields
@@ -38,12 +44,20 @@ public class PlaylistModel {
         this.playlistName = playlistName;
     }
 
+    public Set<Song> getSong() {
+        return song;
+    }
+
+    public void setSong(Set<Song> song) {
+        this.song = song;
+    }
+
     //override the equals and hashcode methods
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        PlaylistModel that = (PlaylistModel) o;
+        Playlist that = (Playlist) o;
         return playlistId == that.playlistId && Objects.equals(playlistName, that.playlistName);
     }
 
