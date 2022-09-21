@@ -21,7 +21,7 @@ public class SongRepository implements SongRepositoryInterface{
     }
 
     @Override
-    public List<SongModel> searchByArtistName(String artist) {
+    public List<SongModel> searchByArtistName(String artistName) {
         return null;
     }
 

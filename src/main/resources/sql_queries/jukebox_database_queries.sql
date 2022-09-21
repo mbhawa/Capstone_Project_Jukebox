@@ -8,6 +8,7 @@ use `jukebox`;
 create table if not exists `song_details`(
 `song_id` int not null primary key auto_increment,
 `song_name` varchar(30) not null,
+`artist_name` varchar(30) not null,
 `album_name` varchar(30) not null,
 `duration` time not null,
 `genre` varchar(20) not null,
