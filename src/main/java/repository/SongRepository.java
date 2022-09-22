@@ -5,22 +5,22 @@
  */
 package repository;
 
-import com.mysql.cj.jdbc.JdbcConnection;
 import model.Song;
 import service.DatabaseService;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.TreeSet;
+
 public class SongRepository implements Repository<Song> {
     DatabaseService databaseService;
     //create a method to display all the songs
     @Override
-    public List<Song> displayAllSongs() throws SQLException {
+    public List<Song> displayAllSongs() throws SQLException, NullPointerException {
         //create object of generic list
         List<Song> songList = new ArrayList<>();
-        Connection connection = databaseService.getConnection();
+        Connection connection;
+        connection = DatabaseService.getConnection();
 
         String query = "Select * from `jukebox`.`song_details`;";
         try {
@@ -39,13 +39,15 @@ public class SongRepository implements Repository<Song> {
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        }catch (Exception e) {
+            throw new RuntimeException(e);
         }
         return songList;
     }
 
     @Override
     public List<Song> searchByAlbumName(List<Song> songList, String albumName) throws SQLException {
-      Connection connection = databaseService.getConnection();
+      Connection connection = DatabaseService.getConnection();
       List<Song> songList1=new ArrayList<Song>();
       for (Song song : songList) {
           if (song.getAlbumName().equalsIgnoreCase(albumName)){
@@ -57,7 +59,7 @@ public class SongRepository implements Repository<Song> {
 
     @Override
     public List<Song> searchBySongName(List<Song> songList, String songName) throws SQLException {
-        Connection connection=databaseService.getConnection();
+        Connection connection= DatabaseService.getConnection();
         List<Song> songList1= new ArrayList<Song>();
         for(Song song : songList) {
             System.out.println(song.getSongName());
@@ -69,13 +71,29 @@ public class SongRepository implements Repository<Song> {
     }
 
     @Override
-    public List<Song> searchByArtistName(String artistName) {
-        return null;
+    public List<Song> searchByArtistName(List<Song> songList,String artistName) {
+        Connection connection= DatabaseService.getConnection();
+        List<Song> songList1= new ArrayList<Song>();
+        for(Song song : songList) {
+            System.out.println(song.getArtistName());
+            if(song.getArtistName().equalsIgnoreCase(artistName)){
+                songList1.add(song);
+            }
+        }
+        return songList1;
     }
 
     @Override
-    public List<Song> searchByGenre(String genre) {
-        return null;
+    public List<Song> searchByGenre(List<Song> songList, String genre) {
+        Connection connection= DatabaseService.getConnection();
+        List<Song> songList1= new ArrayList<Song>();
+        for(Song song : songList) {
+            System.out.println(song.getGenre());
+            if(song.getGenre().equalsIgnoreCase(genre)){
+                songList1.add(song);
+            }
+        }
+        return songList1;
     }
 
 

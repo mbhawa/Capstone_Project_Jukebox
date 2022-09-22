@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="added method to searchBySongName">
+    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="added method to searchByalbumName">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/4/e44a8606ce010ad9b89aafdfcee2ab49afbf6d10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Song.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/SongRepository.java" afterDir="false" />
@@ -70,6 +73,13 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="capstone-project-jukebox" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="capstone_project_jukebox" />
       <method v="2">
@@ -83,6 +93,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -92,13 +107,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663669937929</updated>
-    </task>
-    <task id="LOCAL-00004" summary="added the mysql dependency">
-      <created>1663670415213</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1663670415213</updated>
     </task>
     <task id="LOCAL-00005" summary="created a class SongModel.java">
       <created>1663670925578</created>
@@ -436,7 +444,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663782938974</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="added method to searchByalbumName">
+      <created>1663784485466</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1663784485466</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -451,7 +466,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created a class Main" />
     <MESSAGE value="created a no args constructor" />
     <MESSAGE value="created a parameterised constructor" />
     <MESSAGE value="created the getter and setter methods for the fields" />
@@ -476,6 +490,7 @@
     <MESSAGE value="created a class Repository.java" />
     <MESSAGE value="added method to display all the songs" />
     <MESSAGE value="added method to searchBySongName" />
-    <option name="LAST_COMMIT_MESSAGE" value="added method to searchBySongName" />
+    <MESSAGE value="added method to searchByalbumName" />
+    <option name="LAST_COMMIT_MESSAGE" value="added method to searchByalbumName" />
   </component>
 </project>

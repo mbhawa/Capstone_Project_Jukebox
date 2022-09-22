@@ -20,7 +20,7 @@ public class Song {
 
     //create a no args and a parameterised constructor
 
-    public Song() {
+    public Song(int songId, String name, String genre, double duration, String artistName, String albumName, String songPath) {
     }
 
     public Song(int songId, String songName, String artistName, String albumName, Time duration, String genre, String songPath) {
