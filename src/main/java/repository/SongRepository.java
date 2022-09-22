@@ -14,6 +14,7 @@ import java.util.List;
 
 public class SongRepository implements Repository<Song> {
     DatabaseService databaseService;
+
     //create a method to display all the songs
     @Override
     public List<Song> displayAllSongs() throws SQLException, NullPointerException {
@@ -28,72 +29,122 @@ public class SongRepository implements Repository<Song> {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                int songId = resultSet.getInt(1);
-                String songName = resultSet.getString(2);
-                String artistName = resultSet.getString(3);
-                String albumName = resultSet.getString(4);
-                Time duration = resultSet.getTime(5);
-                String genre = resultSet.getString(6);
-                String songPath = resultSet.getString(7);
-                songList.add(new Song(songId, songName, artistName, albumName, duration, genre, songPath));
+                System.out.println("SONG_ID---SONG_NAME-------------------------------ARTIST_NAME---------GENRE---------------DURATION------------PATH_LOCATION-----------------------------------");
+                System.out.println("==============================================================================================================================================================");
+                while (resultSet.next()) {
+                    System.out.format("%-10d%-40s%-20s%-20s%-20s%-20s", resultSet.getInt(1), resultSet.getString("SONG_NAME"),
+                            resultSet.getString("ARTIST_NAME"),
+                            resultSet.getString("GENRE"),
+                            resultSet.getString("DURATION"),
+                            resultSet.getString("PATH_LOCATION"));
+                    System.out.println();
+                }
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }catch (Exception e) {
-            throw new RuntimeException(e);
+            e.getMessage();
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.getMessage();
+            e.printStackTrace();
         }
         return songList;
     }
 
     @Override
-    public List<Song> searchByAlbumName(List<Song> songList, String albumName) throws SQLException {
-      Connection connection = DatabaseService.getConnection();
-      List<Song> songList1=new ArrayList<Song>();
-      for (Song song : songList) {
-          if (song.getAlbumName().equalsIgnoreCase(albumName)){
-              songList1.add(song);
-          }
-      }
-      return songList1;
+    public List<Song> searchByAlbumName( String albumName) throws SQLException {
+        List<Song> songLists = new ArrayList<>();
+        Connection connection = databaseService.getConnection();
+        Statement statement = connection.createStatement();
+        String sql = "SELECT * FROM SONG_LIST where ALBUM_NAME=? ";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1, albumName);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        System.out.println("SONG_ID---SONG_NAME-------------------------------ARTIST_NAME---------GENRE---------------DURATION------------PATH_LOCATION-----------------------------------");
+        System.out.println("==============================================================================================================================================================");
+        while (resultSet.next()) {
+            System.out.format("%-10d%-40s%-20s%-20s%-20s%-20s", resultSet.getInt(1), resultSet.getString("SONG_NAME"),
+                    resultSet.getString("ARTIST_NAME"),
+                    resultSet.getString("GENRE"),
+                    resultSet.getString("DURATION"),
+                    resultSet.getString("PATH_LOCATION"));
+            System.out.println();
+        }
+        return songLists;
     }
 
     @Override
-    public List<Song> searchBySongName(List<Song> songList, String songName) throws SQLException {
-        Connection connection= DatabaseService.getConnection();
-        List<Song> songList1= new ArrayList<Song>();
-        for(Song song : songList) {
-            System.out.println(song.getSongName());
-            if(song.getSongName().equalsIgnoreCase(songName)){
-                songList1.add(song);
-            }
+    public List<Song> searchBySongName(String songName) throws SQLException {
+        List<Song> songLists = new ArrayList<>();
+        Connection connection = databaseService.getConnection();
+        Statement statement = connection.createStatement();
+        String sql = "SELECT * FROM SONG_LIST where SONG_NAME=? ";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1, songName);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        System.out.println("SONG_ID---SONG_NAME-------------------------------ARTIST_NAME---------GENRE---------------DURATION------------PATH_LOCATION-----------------------------------");
+        System.out.println("==============================================================================================================================================================");
+        while (resultSet.next()) {
+            System.out.format("%-10d%-40s%-20s%-20s%-20s%-20s", resultSet.getInt(1), resultSet.getString("SONG_NAME"),
+                    resultSet.getString("ARTIST_NAME"),
+                    resultSet.getString("GENRE"),
+                    resultSet.getString("DURATION"),
+                    resultSet.getString("PATH_LOCATION"));
+            System.out.println();
         }
-        return songList1;
+        return songLists;
     }
 
     @Override
-    public List<Song> searchByArtistName(List<Song> songList,String artistName) {
-        Connection connection= DatabaseService.getConnection();
-        List<Song> songList1= new ArrayList<Song>();
-        for(Song song : songList) {
-            System.out.println(song.getArtistName());
-            if(song.getArtistName().equalsIgnoreCase(artistName)){
-                songList1.add(song);
+    public List<Song> searchByArtistName(String artistName) {
+        List<Song> songLists = new ArrayList<>();
+        try {
+            Connection connection = databaseService.getConnection();
+            String sql = "SELECT * FROM SONG_LIST WHERE ARTIST_NAME LIKE '%" + artistName + "%'";
+            Statement statement =connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            System.out.println("SONG_ID---SONG_NAME-------------------------------ARTIST_NAME---------GENRE---------------DURATION------------PATH_LOCATION-----------------------------------");
+            System.out.println("==============================================================================================================================================================");
+            while (resultSet.next()) {
+                System.out.format("%-10d%-40s%-20s%-20s%-20s%-20s", resultSet.getInt(1), resultSet.getString("SONG_NAME"),
+                        resultSet.getString("ARTIST_NAME"),
+                        resultSet.getString("GENRE"),
+                        resultSet.getString("DURATION"),
+                        resultSet.getString("PATH_LOCATION"));
+                System.out.println();
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        return songList1;
+
+        return songLists;
+
     }
 
     @Override
-    public List<Song> searchByGenre(List<Song> songList, String genre) {
-        Connection connection= DatabaseService.getConnection();
-        List<Song> songList1= new ArrayList<Song>();
-        for(Song song : songList) {
-            System.out.println(song.getGenre());
-            if(song.getGenre().equalsIgnoreCase(genre)){
-                songList1.add(song);
+    public List<Song> searchByGenre( String genre) {
+        List<Song> songLists = new ArrayList<>();
+        try {
+            Connection connection = databaseService.getConnection();
+            //Statement statement = connection.createStatement();
+            String sql ="SELECT * FROM SONG_LIST WHERE GENRE=?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,genre);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            System.out.println("SONG_ID---SONG_NAME-------------------------------ARTIST_NAME---------GENRE---------------DURATION------------PATH_LOCATION-----------------------------------");
+            System.out.println("==============================================================================================================================================================");
+            while (resultSet.next()){
+                System.out.format("%-10d%-40s%-20s%-20s%-20s%-20s",resultSet.getInt(1),resultSet.getString("SONG_NAME"),
+                        resultSet.getString("ARTIST_NAME"),
+                        resultSet.getString("GENRE"),
+                        resultSet.getString("DURATION"),
+                        resultSet.getString("PATH_LOCATION"));
+                System.out.println();
             }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        return songList1;
+        return songLists;
     }
 
 
