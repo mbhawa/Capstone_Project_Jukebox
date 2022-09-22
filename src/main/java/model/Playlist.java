@@ -21,8 +21,7 @@ public class Playlist {
         song = new TreeSet<>();
     }
 
-    public Playlist(int playlistId, String playlistName, Set<Song> song) {
-        this.playlistId = playlistId;
+    public Playlist( String playlistName, Set<Song> song) {
         this.playlistName = playlistName;
         this.song = song;
     }

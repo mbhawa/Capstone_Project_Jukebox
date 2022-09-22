@@ -11,11 +11,15 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface Repository<T>{
-    List<Song> displayAllSongs() throws SQLException, NullPointerException;
-    List<Song> searchByAlbumName(String albumName) throws SQLException;
-    List<Song> searchBySongName(String songName) throws SQLException;
-    List<Song> searchByArtistName(String artistName);
+public interface Repository {
+    List<Song> getAll(Connection connection) throws SQLException;
 
-    List<Song> searchByGenre(String genre);
+    Song searchByName(Connection connection, String name) throws SQLException;
+
+    Song searchByArtist(Connection connection, String artistName) throws SQLException;
+
+    Song searchByGenre(Connection connection, String genre) throws SQLException;
+
+    Song searchByAlbumName(Connection connection, String albumName) throws SQLException;
 }
+

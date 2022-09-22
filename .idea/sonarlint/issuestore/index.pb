@@ -18,3 +18,5 @@ w
 G.idea/sonarlint/issuestore/3/0/30f9777ea696a18aa49d3e9967e93a4276065227,b\7\b74e8c230459235775e2f7c88126ddb0ac14fa2d
 w
 G.idea/sonarlint/issuestore/b/7/b74e8c230459235775e2f7c88126ddb0ac14fa2d,f\b\fb161f50f4ccaeff05773bcbbd14483b77364e1c
+w
+G.idea/sonarlint/issuestore/f/b/fb161f50f4ccaeff05773bcbbd14483b77364e1c,e\7\e72013ca1ca5900c60bb0f3e4bd9681346413ed5
