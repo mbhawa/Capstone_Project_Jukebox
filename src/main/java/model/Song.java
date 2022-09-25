@@ -5,7 +5,6 @@
  */
 package model;
 
-import java.sql.Time;
 import java.util.Objects;
 
 public class Song {
@@ -14,16 +13,17 @@ public class Song {
     private String songName;
     private String artistName;
     private String albumName;
-    private Time duration;
+    private String duration;
     private String genre;
     private String songPath;
 
     //create a no args and a parameterised constructor
 
-    public Song(int songId, String name, String genre, double duration, String artistName, String albumName, String songPath) {
+
+    public Song() {
     }
 
-    public Song(int songId, String songName, String artistName, String albumName, Time duration, String genre, String songPath) {
+    public Song(int songId, String songName, String artistName, String albumName, String duration, String genre, String songPath) {
         this.songId = songId;
         this.songName = songName;
         this.artistName = artistName;
@@ -66,11 +66,11 @@ public class Song {
         this.albumName = albumName;
     }
 
-    public Time getDuration() {
+    public String getDuration() {
         return duration;
     }
 
-    public void setDuration(Time duration) {
+    public void setDuration(String duration) {
         this.duration = duration;
     }
 

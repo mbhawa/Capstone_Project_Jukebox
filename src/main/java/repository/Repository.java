@@ -7,19 +7,17 @@ package repository;
 
 import model.Song;
 
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.List;
 
 public interface Repository {
-    List<Song> getAll(Connection connection) throws SQLException;
+    List<Song> displayAllSong();
 
-    Song searchByName(Connection connection, String name) throws SQLException;
+    List<Song> songSearchBySongName(List<Song> songList, String name);
 
-    Song searchByArtist(Connection connection, String artistName) throws SQLException;
+    List<Song> songSearchByAlbumName(List<Song> songList, String albumName);
 
-    Song searchByGenre(Connection connection, String genre) throws SQLException;
+    List<Song> songSearchByArtistName(List<Song> songList, String artistName);
 
-    Song searchByAlbumName(Connection connection, String albumName) throws SQLException;
+    List<Song> songSearchByGenre(List<Song> songList, String genre);
 }
 

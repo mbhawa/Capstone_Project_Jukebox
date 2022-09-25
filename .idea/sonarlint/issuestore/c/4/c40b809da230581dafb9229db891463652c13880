@@ -1,0 +1,24 @@
+
+j
+java:S2095A"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(â…ÍÆÿÿÿÿÿ
+j
+java:S2095W"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(â…ÍÆÿÿÿÿÿ
+j
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(â…ÍÆÿÿÿÿÿ
+]
+java:S2095/"GUse try-with-resources or close this "Statement" in a "finally" clause.(”Şû¯
+S	java:S106"9Replace this use of System.out or System.err by a logger.(½æŠÂüÿÿÿÿ
+N	java:S106 "9Replace this use of System.out or System.err by a logger.(•÷¤¹
+B
+java:S1481)"-Remove this unused "playlist" local variable.(¥èÔJ
+G
+java:S1481*"*Remove this unused "count" local variable.(æÕ¿¼8Ìİß¨·0
+N	java:S1062"9Replace this use of System.out or System.err by a logger.(Üò¨™
+9
+java:S11162"Remove this empty statement.(Üò¨™8Ïİß¨·0
+b
+java:S1854D"GRemove this useless assignment to local variable "playlistIdFromTable".(‰¶Öóûÿÿÿÿ
+S
+java:S1481D"8Remove this unused "playlistIdFromTable" local variable.(‰¶Öóûÿÿÿÿ
+N	java:S106\"9Replace this use of System.out or System.err by a logger.(·¡ÿ
+U	java:S106^"9Replace this use of System.out or System.err by a logger.(Ó®ö¼8Òİß¨·0

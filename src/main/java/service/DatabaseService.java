@@ -10,41 +10,36 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseService {
-    //create fields for URL, USERNAME and PASSWORD
-    private static final String URL="jdbc:mysql://localhost:3306/jukebox";
-    private static final String USERNAME="root";
-    private static final String PASSWORD="rootpassword";
-    private static Connection connection;
+    // the url of the database
+    private static final String URL = "Jdbc:mysql://localhost:3306/jukebox";
 
-    //create constructor for the connection
-    public DatabaseService() {
-        this.connection = null;
-    }
-    //create getter method for the field
-    public static Connection getConnection() {
-        return connection;
-    }
+    // the credentials of the user trying to log in to the database
+    private static final String USERNAME = "root";
+    private static final String PASSWORD = "rootpassword";
 
-    //create a method for connecting the database
-    public boolean connect() {
+    // private field to store the reference of the connection object
+    private Connection databaseConnection;
+
+
+    // Create a connection object using the driverManager class
+    public Connection connect() {
         try {
-            this.connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-            printConnectionStatus();
-            return true;
-        } catch (SQLException exception) {
-            System.err.println("Could not connect to the database!!");
-            exception.printStackTrace();
-            printConnectionStatus();
-            return false;
+            databaseConnection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+        return databaseConnection;
     }
 
-    // create a method for printing the connection method
-    public void printConnectionStatus() {
-        if (connection != null) {
-            System.out.println(" \u001B[32m CONNECTION : ACTIVE \u001B[32m");
+    // check connection
+    public Boolean printConnectionStatus() {
+
+        if (databaseConnection == connect()) {
+            System.out.println("Connected to the database");
         } else {
-            System.err.println("CONNECTION : INACTIVE");
+            System.err.println(" connected to the database");
         }
+        return databaseConnection != null;
     }
 }

@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="completed the method insert into playlist">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql_queries/jukebox_database.sql" afterDir="false" />
+    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="created a class WrongInputException.java">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/0/c04c2ff81e3dbdb25e1f1444fea8a3239c1cbca8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/WrongInputException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Song.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/PlaylistRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/SongRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/MusicPlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/MusicPlayerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql_queries/jukebox_database_queries.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +64,10 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "last_opened_file_path": "C:/Users/Mridul/IdeaProjects/capstone-project-jukebox/src/main/resources/sql_queries",
+    "ToolWindowSonarLint.ShowToolbar": "false",
+    "last_opened_file_path": "C:/Users/Mridul/Downloads/capstone-project-jukebox-master",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -67,6 +76,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mridul\IdeaProjects\capstone-project-jukebox\src\main\resources\sql_queries" />
       <recent name="C:\Users\Mridul\IdeaProjects\Capstone_Project_Jukebox\src\main\resources\songs_list" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -108,20 +118,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663669937929</updated>
-    </task>
-    <task id="LOCAL-00007" summary="created a class DatabaseService.java">
-      <created>1663672752056</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1663672752056</updated>
-    </task>
-    <task id="LOCAL-00008" summary="created fields for the class SongModel.java">
-      <created>1663673115430</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1663673115430</updated>
     </task>
     <task id="LOCAL-00009" summary="created a no args constructor for SongModel.java">
       <created>1663673171482</created>
@@ -452,7 +448,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663824732015</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="created a file jukebox database.sql">
+      <created>1663847676578</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1663847676579</updated>
+    </task>
+    <task id="LOCAL-00057" summary="created an exception WrongInputException">
+      <created>1663905862383</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1663905862383</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -467,8 +477,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created the getter and setter methods for the fields" />
-    <MESSAGE value="created the equals and hashcode method" />
     <MESSAGE value="added the toString method" />
     <MESSAGE value="added a query to create a database `jukebox`" />
     <MESSAGE value="added a query to use database `jukebox`" />
@@ -492,6 +500,24 @@
     <MESSAGE value="added method to searchByalbumName" />
     <MESSAGE value="created the main method" />
     <MESSAGE value="completed the method insert into playlist" />
-    <option name="LAST_COMMIT_MESSAGE" value="completed the method insert into playlist" />
+    <MESSAGE value="created a file jukebox database.sql" />
+    <MESSAGE value="created an exception WrongInputException" />
+    <option name="LAST_COMMIT_MESSAGE" value="created an exception WrongInputException" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLException" package="java.sql" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="getAlbum" />
+        <watch expression="getAlbum" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

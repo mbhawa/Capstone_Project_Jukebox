@@ -1,0 +1,27 @@
+
+e
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(­è¹×
+Z
+java:S2147/"DCombine this catch with the one at line 45, which has the same body.(ßÈ´
+T
+java:S18547">Remove this useless assignment to local variable "connection".(üé˜å
+E
+java:S14817"/Remove this unused "connection" local variable.(üé˜å
+T
+java:S1854C">Remove this useless assignment to local variable "connection".(üé˜å
+E
+java:S1481C"/Remove this unused "connection" local variable.(üé˜å
+T
+java:S1854O">Remove this useless assignment to local variable "connection".(üé˜å
+E
+java:S1481O"/Remove this unused "connection" local variable.(üé˜å
+T
+java:S1854[">Remove this useless assignment to local variable "connection".(üé˜å
+E
+java:S1481["/Remove this unused "connection" local variable.(üé˜å
+s
+java:S3457f"Q%n should be used in place of \n to produce the platform-specific line separator.(½ÏÉ¿ıÿÿÿÿ8İÍÃ¶0
+Z	java:S106f"9Replace this use of System.out or System.err by a logger.(½ÏÉ¿ıÿÿÿÿ8İÍÃ¶0
+s
+java:S3457h"Q%n should be used in place of \n to produce the platform-specific line separator.(òÏ©ğşÿÿÿÿ8ŞÍÃ¶0
+Z	java:S106h"9Replace this use of System.out or System.err by a logger.(òÏ©ğşÿÿÿÿ8ßÍÃ¶0

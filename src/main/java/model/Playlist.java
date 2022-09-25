@@ -5,6 +5,7 @@
  */
 package model;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import java.util.TreeSet;
@@ -17,13 +18,16 @@ public class Playlist {
     private Set<Song> song;
 
     //create a no args and a parameterised constructor
-    public Playlist() {
+    public Playlist(int playlistId, String playlistName, List<Song> songs) {
         song = new TreeSet<>();
     }
 
-    public Playlist( String playlistName, Set<Song> song) {
+    public Playlist(String playlistName, Set<Song> song) {
         this.playlistName = playlistName;
         this.song = song;
+    }
+
+    public Playlist(String playList, int count) {
     }
 
     //create getter and setter methods for the fields

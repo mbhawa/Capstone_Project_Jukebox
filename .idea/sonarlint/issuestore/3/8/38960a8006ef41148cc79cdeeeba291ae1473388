@@ -1,0 +1,11 @@
+
+d
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(«•Á&
+Z
+java:S2147;"DCombine this catch with the one at line 57, which has the same body.(É®£
+_
+java:S2147="DCombine this catch with the one at line 57, which has the same body.(Ñ¾éÓüÿÿÿÿ
+Z
+java:S2147?"DCombine this catch with the one at line 57, which has the same body.(ï­£Ä
+M	java:S106)"9Replace this use of System.out or System.err by a logger.(Šï³I
+N	java:S1065"9Replace this use of System.out or System.err by a logger.(áùÖ²
