@@ -5,8 +5,8 @@
  */
 package exceptions;
 
-public class WrongInputException extends Exception {
-    public WrongInputException(String message) {
+public class EmptyPlaylistException extends Exception {
+    public EmptyPlaylistException(String message) {
         super(message);
     }
 }
