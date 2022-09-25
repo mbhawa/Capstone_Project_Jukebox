@@ -67,7 +67,7 @@ public class SongRepository implements Repository {
         Connection connection = databaseService.connect();
         List<Song> songList1 = new ArrayList<>();
         for (Song song : songList) {
-            if (song.getSongName().equalsIgnoreCase(albumName)) {
+            if (song.getAlbumName().equalsIgnoreCase(albumName)) {
                 songList1.add(song);
             }
         }

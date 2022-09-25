@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `jukebox` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+create DATABASE  IF NOT EXISTS `jukebox` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `jukebox`;
 -- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
 --
@@ -21,14 +21,11 @@ USE `jukebox`;
 -- Table structure for table `playlist`
 --
 
-DROP TABLE IF EXISTS `playlist`;
+drop table IF EXISTS `playlist`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `playlist` (
-  `playlist_id` int NOT NULL AUTO_INCREMENT,
-  `playlist_name` varchar(35) NOT NULL,
-  `song_id` int NOT NULL,
-  PRIMARY KEY (`playlist_id`)
+create TABLE `playlist` (
+  `playlistName` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -36,19 +33,43 @@ CREATE TABLE `playlist` (
 -- Dumping data for table `playlist`
 --
 
-LOCK TABLES `playlist` WRITE;
+lock TABLES `playlist` WRITE;
 /*!40000 ALTER TABLE `playlist` DISABLE KEYS */;
+insert into `playlist` VALUES ('we');
 /*!40000 ALTER TABLE `playlist` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `playlist1`
+--
+
+drop table IF EXISTS `playlist1`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+create TABLE `playlist1` (
+  `playlistID` int DEFAULT NULL,
+  `song_id` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `playlist1`
+--
+
+lock TABLES `playlist1` WRITE;
+/*!40000 ALTER TABLE `playlist1` DISABLE KEYS */;
+insert into `playlist1` VALUES (1,4);
+/*!40000 ALTER TABLE `playlist1` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
 -- Table structure for table `song_details`
 --
 
-DROP TABLE IF EXISTS `song_details`;
+drop table IF EXISTS `song_details`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `song_details` (
+create TABLE `song_details` (
   `song_id` int NOT NULL AUTO_INCREMENT,
   `song_name` varchar(35) NOT NULL,
   `artist_name` varchar(30) NOT NULL,
@@ -64,9 +85,9 @@ CREATE TABLE `song_details` (
 -- Dumping data for table `song_details`
 --
 
-LOCK TABLES `song_details` WRITE;
+lock TABLES `song_details` WRITE;
 /*!40000 ALTER TABLE `song_details` DISABLE KEYS */;
-INSERT INTO `song_details` VALUES (1,'Ganstas Paradise','Coolio','unknown','00:04:16','rock','src/main/resources/songs_list/GangstasParadise.wav'),(2,'Hall of fame','The Script','unknown','00:03:54','pop','src/main/resources/songs_list/HallOfFame.wav'),(3,'Heat Waves','Glass Animals','unknown','00:03:56','pop','src/main/resources/songs_list/HeatWaves.wav'),(4,'Nights','Avicii','Stories','00:03:11','house music','src/main/resources/songs_list/Nights.wav'),(5,'Peeky Blinders','Nick Caves','Peeky Blinders','00:06:14','pop','src/main/resources/songs_list/PeekyBlinderTheme.wav'),(6,'See You Again','Charlie Puth','unknown','00:03:58','pop','src/main/resources/songs_list/SeeYouAgain.wav');
+insert into `song_details` VALUES (1,'Ganstas Paradise','Coolio','unknown','00:04:16','rock','src/main/resources/songs_list/GangstasParadise.wav'),(2,'Hall of fame','The Script','unknown','00:03:54','pop','src/main/resources/songs_list/HallOfFame.wav'),(3,'Heat Waves','Glass Animals','unknown','00:03:56','pop','src/main/resources/songs_list/HeatWaves.wav'),(4,'Nights','Avicii','Stories','00:03:11','house music','src/main/resources/songs_list/Nights.wav'),(5,'Peeky Blinders','Nick Caves','Peeky Blinders','00:06:14','pop','src/main/resources/songs_list/PeekyBlinderTheme.wav'),(6,'See You Again','Charlie Puth','unknown','00:03:58','pop','src/main/resources/songs_list/SeeYouAgain.wav');
 /*!40000 ALTER TABLE `song_details` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -79,4 +100,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-22 17:22:43
+-- Dump completed on 2022-09-25 23:37:32

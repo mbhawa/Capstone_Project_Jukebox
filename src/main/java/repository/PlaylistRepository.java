@@ -5,6 +5,7 @@
  */
 package repository;
 
+import exceptions.EmptyPlaylistException;
 import model.Playlist;
 import model.Song;
 import service.DatabaseService;
@@ -19,17 +20,17 @@ public class PlaylistRepository {
 
 
     // for adding PlayList into dataBase
-    public void createNewPlaylist(String playlistName) {
-        Connection connection = databaseService.connect();
-        String query = "Insert into playlist(playlist_name) values(?);";
+    public void addIntoDatabase(String playListName) {
+        Connection getConnection = databaseService.connect();
+        String query = "Insert into playList values(?);";
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, playlistName);
+            PreparedStatement preparedStatement = getConnection.prepareStatement(query);
+            preparedStatement.setString(1, playListName);
             int row = preparedStatement.executeUpdate();
             if (row == 1) {
-                System.out.println("Playlist created Successfully");
+                System.out.println("Play List successful created");
             } else {
-                System.out.println("Playlist not created");
+                System.out.println("Play List not created");
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -37,35 +38,33 @@ public class PlaylistRepository {
     }
 
     // Show play list
-    public List<Playlist> showPlaylists() {
-        String playlist = null;
+    public List<Playlist> ShowPlayList() throws SQLException {
+        String playList = null;
         int count = 0;
-        List<Playlist> playlistsList = new ArrayList<>();
+        List<Playlist> playListsName = new ArrayList<>();
         Connection getConnection = databaseService.connect();
-        String query = "Select `playlist_id`,`playlist_name`,`song_id` from `jukebox`.`playlist`;";
-        try {
-            Statement statement = getConnection.createStatement();
-            ResultSet resultSet = statement.executeQuery(query);
-            while (resultSet.next()) {
-                System.out.println(resultSet);;
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        String query = "Select * from playlist;";
+        Statement statement = getConnection.createStatement();
+        ResultSet resultSet = statement.executeQuery(query);
+        while (resultSet.next()) {
+            playList = resultSet.getString(1);
+            count++;
+            playListsName.add(new Playlist(playList, count));
         }
-        return playlistsList;
+        return playListsName;
     }
 
     //get song from playList
-    public List<Song> getSongFromList(int playlistId, List<Song> songList) {
+    public List<Song> getSongFromList(int playListId, List<Song> songList) {
         List<Song> getSong = new ArrayList<>();
-        Connection connection = databaseService.connect();
-        String query = "Select * from playlist where playlist_id = " + playlistId;
+        Connection getConnection = databaseService.connect();
+        String query = "Select * from playlist1 where playListId = " + playListId;
 
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            PreparedStatement preparedStatement = getConnection.prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                int playlistIdFromTable = resultSet.getInt(1);
+                int playListIdFromTable = resultSet.getInt(1);
                 int songId = resultSet.getInt(2);
                 for (Song song : songList) {
                     if (songId == song.getSongId()) {
@@ -73,19 +72,22 @@ public class PlaylistRepository {
                     }
                 }
             }
-        } catch (SQLException e) {
+            if (getSong == null) {
+                throw new EmptyPlaylistException("The following playlist is empty");
+            }
+        } catch (SQLException | EmptyPlaylistException e) {
             e.printStackTrace();
         }
         return getSong;
     }
 
     // inserting song into play list
-    public void insertSongIntoPlayList(int playlistId, int songId) {
-        Connection connection = databaseService.connect();
-        String query = "Insert into playlist(playlist_id, song-id) values(?,?);";
+    public void insertSongIntoPlayList(int playListId, int songId) {
+        Connection getConnection = databaseService.connect();
+        String query = "Insert into playList1 values(?,?);";
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setInt(1, playlistId);
+            PreparedStatement preparedStatement = getConnection.prepareStatement(query);
+            preparedStatement.setInt(1, playListId);
             preparedStatement.setInt(2, songId);
             int row = preparedStatement.executeUpdate();
             if (row == 1) {
