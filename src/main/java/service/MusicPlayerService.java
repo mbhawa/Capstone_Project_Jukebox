@@ -17,6 +17,12 @@ import java.util.Scanner;
 public class MusicPlayerService {
     //this method play a particular song it will take the song id which
     //you want to play
+
+    /**
+     * This function takes in a song id as a parameter and plays the song with that id
+     *
+     * @param songId The song id of the song you want to play.
+     */
     public void playParticular(int songId) {
         Scanner scanner = new Scanner(System.in);
         try {

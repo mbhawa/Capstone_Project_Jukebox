@@ -32,4 +32,5 @@ class DatabaseServiceTest {
         String actual = String.valueOf(databaseService.printConnectionStatus());
         assertNotEquals(expected, actual);
     }
+
 }

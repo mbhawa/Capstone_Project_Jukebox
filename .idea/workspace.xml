@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="created a class SongRepositoryTest.java">
-      <change afterPath="$PROJECT_DIR$/src/test/java/service/DatabaseServiceTest.java" afterDir="false" />
+    <list default="true" id="f98f2f2a-6b38-452d-b045-29ac44c643d7" name="Changes" comment="created a class DatabaseServiceTest.java">
+      <change afterPath="$PROJECT_DIR$/src/test/java/repository/PlaylistRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/PlaylistRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/SongRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/MusicPlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/MusicPlayerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/PlaylistComparable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/SongComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/repository/SongRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/repository/SongRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/service/DatabaseServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/DatabaseServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,44 +85,27 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="service" />
       <recent name="repository" />
+      <recent name="service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DatabaseServiceTest.printConnectionFailure">
-    <configuration name="DatabaseServiceTest.printConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="capstone-project-jukebox" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="service" />
-      <option name="MAIN_CLASS_NAME" value="service.DatabaseServiceTest" />
-      <option name="METHOD_NAME" value="printConnection" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DatabaseServiceTest.printConnectionFailure" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in capstone-project-jukebox" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone-project-jukebox" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="service" />
-      <option name="MAIN_CLASS_NAME" value="service.DatabaseServiceTest" />
-      <option name="METHOD_NAME" value="printConnectionFailure" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlaylistRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone-project-jukebox" />
       <extension name="coverage">
         <pattern>
@@ -124,13 +114,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="repository" />
-      <option name="MAIN_CLASS_NAME" value="repository.SongRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="repository.PlaylistRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongRepositoryTest.getSongSearchByArtistName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlaylistRepositoryTest.showPlaylist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone-project-jukebox" />
       <extension name="coverage">
         <pattern>
@@ -139,14 +129,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="repository" />
-      <option name="MAIN_CLASS_NAME" value="repository.SongRepositoryTest" />
-      <option name="METHOD_NAME" value="getSongSearchByArtistName" />
+      <option name="MAIN_CLASS_NAME" value="repository.PlaylistRepositoryTest" />
+      <option name="METHOD_NAME" value="showPlaylist" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongRepositoryTest.songSearchBySongName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SongRepositoryTest.searchByGenreFailure" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone-project-jukebox" />
       <extension name="coverage">
         <pattern>
@@ -156,7 +146,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="repository" />
       <option name="MAIN_CLASS_NAME" value="repository.SongRepositoryTest" />
-      <option name="METHOD_NAME" value="songSearchBySongName" />
+      <option name="METHOD_NAME" value="searchByGenreFailure" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -177,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DatabaseServiceTest.printConnectionFailure" />
-        <item itemvalue="JUnit.DatabaseServiceTest.printConnection" />
-        <item itemvalue="JUnit.SongRepositoryTest" />
-        <item itemvalue="JUnit.SongRepositoryTest.getSongSearchByArtistName" />
-        <item itemvalue="JUnit.SongRepositoryTest.songSearchBySongName" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.All in capstone-project-jukebox" />
+        <item itemvalue="JUnit.PlaylistRepositoryTest" />
+        <item itemvalue="JUnit.PlaylistRepositoryTest.showPlaylist" />
+        <item itemvalue="JUnit.SongRepositoryTest.searchByGenreFailure" />
       </list>
     </recent_temporary>
   </component>
@@ -193,13 +183,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663669937929</updated>
-    </task>
-    <task id="LOCAL-00013" summary="added toString method">
-      <created>1663673369052</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1663673369052</updated>
     </task>
     <task id="LOCAL-00014" summary="created a class PlaylistModel.java">
       <created>1663673640064</created>
@@ -537,7 +520,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664130263805</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="created a class DatabaseServiceTest.java">
+      <created>1664134369179</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1664134369179</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -552,7 +542,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added a constructor for the Connection" />
     <MESSAGE value="created a method for connecting the databse" />
     <MESSAGE value="aaded a query to create a table `playlist_details`" />
     <MESSAGE value="refactored the model classes" />
@@ -577,7 +566,8 @@
     <MESSAGE value=" class WrongInputException.java extends Exception" />
     <MESSAGE value="created a class EmptyPlaylistException.java that extends Exception" />
     <MESSAGE value="created a class SongRepositoryTest.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="created a class SongRepositoryTest.java" />
+    <MESSAGE value="created a class DatabaseServiceTest.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="created a class DatabaseServiceTest.java" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

@@ -20,6 +20,12 @@ public class SongRepository implements Repository {
     DatabaseService databaseService = new DatabaseService();
 
     // display all the song from dataBase
+
+    /**
+     * This function is used to display all the songs in the database
+     *
+     * @return the list of songs.
+     */
     public List<Song> displayAllSong() {
 
         //creating object of genericList
@@ -50,7 +56,27 @@ public class SongRepository implements Repository {
         return songList;
     }
 
+    /**
+     * Sort the list of songs by song name.
+     *
+     * @param songList The list of songs to be sorted.
+     * @return A list of songs that have been sorted by song name.
+     */
+    public List<Song> sortSongs(List<Song> songList) {
+        songList.sort((o1, o2) -> o1.getGenre().compareTo(o2.getGenre()));
+        return songList;
+    }
+
     // search song by name
+
+    /**
+     * It takes a list of songs and a song name as input, and returns a list of songs whose name matches the input song
+     * name
+     *
+     * @param songList The list of songs that you want to search through.
+     * @param name     The name of the song you want to search for.
+     * @return A list of songs that match the song name.
+     */
     public List<Song> songSearchBySongName(List<Song> songList, String name) {
         Connection connection = databaseService.connect();
         List<Song> songList1 = new ArrayList<>();
@@ -63,6 +89,15 @@ public class SongRepository implements Repository {
     }
 
     //search song by albumName
+
+    /**
+     * This function takes a list of songs and an album name as input and returns a list of songs that have the same album
+     * name as the input album name
+     *
+     * @param songList  The list of songs that you want to search through.
+     * @param albumName The name of the album you want to search for.
+     * @return A list of songs that match the album name.
+     */
     public List<Song> songSearchByAlbumName(List<Song> songList, String albumName) {
         Connection connection = databaseService.connect();
         List<Song> songList1 = new ArrayList<>();
@@ -75,6 +110,14 @@ public class SongRepository implements Repository {
     }
 
     //search song by artist name
+
+    /**
+     * This function takes a list of songs and an artist name as input and returns a list of songs by that artist
+     *
+     * @param songList   The list of songs that you want to search through.
+     * @param artistName The name of the artist you want to search for.
+     * @return A list of songs that match the artist name.
+     */
     public List<Song> songSearchByArtistName(List<Song> songList, String artistName) {
         Connection connection = databaseService.connect();
         List<Song> songList1 = new ArrayList<>();
@@ -87,6 +130,14 @@ public class SongRepository implements Repository {
     }
 
     //search song by genre
+
+    /**
+     * This function takes a list of songs and a genre as parameters and returns a list of songs that match the genre
+     *
+     * @param songList The list of songs that you want to search through.
+     * @param genre    The genre of the song
+     * @return A list of songs that match the genre.
+     */
     public List<Song> songSearchByGenre(List<Song> songList, String genre) {
         Connection connection = databaseService.connect();
         List<Song> songList1 = new ArrayList<>();
@@ -98,6 +149,11 @@ public class SongRepository implements Repository {
         return songList1;
     }
 
+    /**
+     * This function is used to display the song list in a formatted manner
+     *
+     * @param songList The list of songs to be displayed.
+     */
     public void displayFormat(List<Song> songList) {
         System.out.format("%-10s %-30s %-20s %-30s %-20s %-30s\n", "Id", "Name", "Duration", "AlbumName", "ArtistName", "Genre");
         for (Song song : songList) {

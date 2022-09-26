@@ -34,4 +34,16 @@ class SongRepositoryTest {
         List<Song> songList = songRepository.displayAllSong();
         Assertions.assertNotEquals(4, songList.size());
     }
+
+    @Test
+    void searchByGenre() {
+        List<Song> actual = songRepository.songSearchByGenre(songList, "pop");
+        Assertions.assertEquals(4, actual.size());
+    }
+
+    @Test
+    void searchByGenreFailure() {
+        List<Song> actual = songRepository.songSearchByGenre(songList, "pop");
+        Assertions.assertNotEquals(3, actual.size());
+    }
 }

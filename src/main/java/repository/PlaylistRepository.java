@@ -20,6 +20,12 @@ public class PlaylistRepository {
 
 
     // for adding PlayList into dataBase
+
+    /**
+     * It takes a string as an argument and inserts it into the database
+     *
+     * @param playListName The name of the playlist to be added.
+     */
     public void addIntoDatabase(String playListName) {
         Connection getConnection = databaseService.connect();
         String query = "Insert into playList values(?);";
@@ -38,10 +44,17 @@ public class PlaylistRepository {
     }
 
     // Show play list
-    public List<Playlist> ShowPlayList() throws SQLException {
+
+    /**
+     * This function is used to show the playlists that are created by the user
+     *
+     * @return A list of playlists
+     */
+    public List<Playlist> ShowPlayList() throws SQLException, EmptyPlaylistException {
         String playList = null;
         int count = 0;
-        List<Playlist> playListsName = new ArrayList<>();
+        List<Playlist> playListsName;
+        playListsName = new ArrayList<>();
         Connection getConnection = databaseService.connect();
         String query = "Select * from playlist;";
         Statement statement = getConnection.createStatement();
@@ -50,11 +63,22 @@ public class PlaylistRepository {
             playList = resultSet.getString(1);
             count++;
             playListsName.add(new Playlist(playList, count));
+            if (playListsName == null) {
+                throw new EmptyPlaylistException("Playlist is empty");
+            }
         }
         return playListsName;
     }
 
     //get song from playList
+
+    /**
+     * This function takes in a playlist id and a list of songs and returns a list of songs that are in the playlist
+     *
+     * @param playListId The id of the playlist you want to get the songs from.
+     * @param songList   This is the list of songs that are available in the database.
+     * @return A list of songs from the playlist
+     */
     public List<Song> getSongFromList(int playListId, List<Song> songList) {
         List<Song> getSong = new ArrayList<>();
         Connection getConnection = databaseService.connect();
@@ -82,6 +106,13 @@ public class PlaylistRepository {
     }
 
     // inserting song into play list
+
+    /**
+     * This function is used to insert a song into a playlist
+     *
+     * @param playListId The id of the playlist you want to add the song to.
+     * @param songId     The id of the song you want to add to the playlist.
+     */
     public void insertSongIntoPlayList(int playListId, int songId) {
         Connection getConnection = databaseService.connect();
         String query = "Insert into playList1 values(?,?);";

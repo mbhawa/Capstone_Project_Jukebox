@@ -11,20 +11,18 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws EmptyPlaylistException, WrongInputException, SQLException {
+    public static void main(String[] args) throws SQLException, WrongInputException, EmptyPlaylistException {
         //creating scanner object for take input from user
         Scanner scanner = new Scanner(System.in);
         // creating object of song repository class for call method
         SongRepository songRepository = new SongRepository();
         // creating object of playlist repository class for call method
-        PlaylistRepository playlistRepository = new PlaylistRepository();
+        PlaylistRepository playListRepository = new PlaylistRepository();
         //creating object os song service class for call method
         MusicPlayerService musicPlayerService = new MusicPlayerService();
-        //  System.out.println("-----------------All song------------------");
-        // System.out.println();
         //display method return value store this object
-        List<Song> displayAllSongs = songRepository.displayAllSong();
-        songRepository.displayFormat(displayAllSongs);
+        List<Song> displayAllSong = songRepository.displayAllSong();
+        songRepository.displayFormat(displayAllSong);
         System.out.println();
         System.out.println("----------------------------------------------");
         System.out.println();
@@ -34,12 +32,10 @@ public class Main {
             System.out.println("Press 2 to Play a Song");
             System.out.println("Press 3 to create play list");
             System.out.println("Press 4 to insert song into play List");
-            System.out.println("Press 5 to view play lists");
-            System.out.println("Press 6 to Exit");
-            if ((task = scanner.nextInt()) < 1 || task > 6) {
-                throw new WrongInputException("Wrong Input Exception-Enter a valid option");
-            }
-            ;
+            System.out.println("Press 5 to view play list");
+            System.out.println("Press 6 to sort list by genre");
+            System.out.println("Press 7 to Exit");
+            task = scanner.nextInt();
             System.out.println();
             System.out.println("--------------------------------------------------------------------------");
             System.out.println();
@@ -55,91 +51,69 @@ public class Main {
                         System.out.println("Enter Genre name ::");
                         String genre = scanner.next();
                         List<Song> getGenre = null;
-                        try {
-                            getGenre = songRepository.songSearchByGenre(displayAllSongs, genre);
-                            songRepository.displayFormat(getGenre);
-                            System.out.println("If you want to play song then press (Y/N)");
-                            String option = scanner.next();
-                            if (option.equals("Y")) {
-                                System.out.println("please enter the song id which you want play");
-                                int id = scanner.nextInt();
-                                musicPlayerService.playParticular(id);
-                                System.out.println();
-                            } else {
-                                break;
-                            }
-                        }/*catch (GenreNotFoundException e) {
-                            e.printStackTrace();
-                        }*/ catch (Exception e) {
-                            e.printStackTrace();
+                        getGenre = songRepository.songSearchByGenre(displayAllSong, genre);
+                        songRepository.displayFormat(getGenre);
+                        System.out.println("If you want to play song then press (Y/N)");
+                        String option = scanner.next();
+                        if (option.equals("Y")) {
+                            System.out.println("please enter the song id which you want play");
+                            int id = scanner.nextInt();
+                            musicPlayerService.playParticular(id);
+                            System.out.println();
+                        } else {
+                            break;
                         }
                     } else if (choice == 2) {
                         System.out.println("Enter Album name ::");
                         String album = scanner.next();
-                        List<Song> getAlbum = null;
-                        try {
-                            getAlbum = songRepository.songSearchByAlbumName(displayAllSongs, album);
-                            songRepository.displayFormat(getAlbum);
-                            System.out.println("If you want to play song then press (Y/N)");
-                            String option = scanner.next();
-                            if (option.equals("Y")) {
-                                System.out.println("please enter the song id which you want play");
-                                int id = scanner.nextInt();
-                                musicPlayerService.playParticular(id);
-                                System.out.println();
-                            } else {
-                                break;
-                            }
-                        } catch (Exception e) {
-                            e.printStackTrace();
+                        List<Song> getAlbum = songRepository.songSearchByAlbumName(displayAllSong, album);
+                        songRepository.displayFormat(getAlbum);
+                        System.out.println("If you want to play song then press (Y/N)");
+                        String option = scanner.next();
+                        if (option.equals("Y")) {
+                            System.out.println("please enter the song id which you want play");
+                            int id = scanner.nextInt();
+                            musicPlayerService.playParticular(id);
+                            System.out.println();
+                        } else {
+                            break;
                         }
                     } else if (choice == 3) {
                         System.out.println("Enter Artist Name ::");
-                        scanner.nextLine();
                         String artistName = scanner.next();
-                        List<Song> getArtist = null;
-                        try {
-                            getArtist = songRepository.songSearchByArtistName(displayAllSongs, artistName);
-                            songRepository.displayFormat(getArtist);
-                            System.out.println("If you want to play song then press (Y/N)");
-                            String option = scanner.next();
-                            if (option.equals("Y")) {
-                                System.out.println("please enter the song id which you want play");
-                                int id = scanner.nextInt();
-                                musicPlayerService.playParticular(id);
-                                System.out.println();
-                            } else {
-                                break;
-                            }
-                        } catch (Exception e) {
-                            e.printStackTrace();
+                        scanner.nextLine();
+                        List<Song> getArtist = songRepository.songSearchByArtistName(displayAllSong, artistName);
+                        songRepository.displayFormat(getArtist);
+                        System.out.println("If you want to play song then press (Y/N)");
+                        String option = scanner.next();
+                        if (option.equals("Y")) {
+                            System.out.println("please enter the song id which you want play");
+                            int id = scanner.nextInt();
+                            musicPlayerService.playParticular(id);
+                            System.out.println();
+                        } else {
+                            break;
                         }
                     } else if (choice == 4) {
                         System.out.println("Enter Song Name ::");
                         scanner.nextLine();
                         String songName = scanner.nextLine();
                         List<Song> getSong = null;
-                        try {
-                            getSong = songRepository.songSearchBySongName(displayAllSongs, songName);
-                            songRepository.displayFormat(getSong);
-                            System.out.println("If you want to play song then press (Y/N)");
-                            String option = scanner.next();
-                            if (option.equals("Y")) {
-                                System.out.println("please enter the song id which you want play");
-                                int id = scanner.nextInt();
-                                musicPlayerService.playParticular(id);
-                                System.out.println();
-                            } else {
-                                break;
-                            }
-                        } /*catch (SongNotFoundException e) {
-                            e.printStackTrace();
-                        }*/ catch (Exception e) {
-                            e.printStackTrace();
+                        getSong = songRepository.songSearchBySongName(displayAllSong, songName);
+                        songRepository.displayFormat(getSong);
+                        System.out.println("If you want to play song then press (Y/N)");
+                        String option = scanner.next();
+                        if (option.equals("Y")) {
+                            System.out.println("please enter the song id which you want play");
+                            int id = scanner.nextInt();
+                            musicPlayerService.playParticular(id);
+                            System.out.println();
+                        } else {
+                            break;
                         }
                     }
                 case 2:
-                    songRepository.displayFormat(displayAllSongs);
+                    songRepository.displayFormat(displayAllSong);
                     System.out.println("Please enter song id which you want to play");
                     int choice2 = scanner.nextInt();
                     System.out.println("---------------------------------------------------------------------");
@@ -151,26 +125,26 @@ public class Main {
                     System.out.println("Enter play list name::");
                     String playListName = scanner.next();
                     //scanner.nextLine();
-                    playlistRepository.addIntoDatabase(playListName);
+                    playListRepository.addIntoDatabase(playListName);
                     System.out.println();
                     System.out.println("Enter play list name::");
                     break;
                 case 4:
                     System.out.println("------------------insert song into play List------------------------------");
-                    List<Playlist> getPlayListName1 = playlistRepository.ShowPlayList();
-                    for (Playlist playList : getPlayListName1) {
+                    List<Playlist> getPlaylistName1 = playListRepository.ShowPlayList();
+                    for (Playlist playList : getPlaylistName1) {
                         System.out.println(playList.getPlaylistId() + " " + playList.getPlaylistName());
                     }
                     System.out.println("Enter Play list number for choose playList which you want add song::");
                     int playListId = scanner.nextInt();
-                    songRepository.displayFormat(displayAllSongs);
+                    songRepository.displayFormat(displayAllSong);
                     System.out.println("Enter Song id which song you want to add into play list::");
                     int songId = scanner.nextInt();
-                    playlistRepository.insertSongIntoPlayList(playListId, songId);
+                    playListRepository.insertSongIntoPlayList(playListId, songId);
                     break;
                 case 5:
                     System.out.println("-------------------view to play list--------------------------------------");
-                    List<Playlist> getPlayListName = playlistRepository.ShowPlayList();
+                    List<Playlist> getPlayListName = playListRepository.ShowPlayList();
                     for (Playlist playList : getPlayListName) {
                         System.out.println(playList.getPlaylistId() + " " + playList.getPlaylistName());
                     }
@@ -181,7 +155,7 @@ public class Main {
                     if (choice3 == 1) {
                         System.out.println("Please enter the play list id which you view the song");
                         int playListIds = scanner.nextInt();
-                        List<Song> getSongFromList = playlistRepository.getSongFromList(playListIds, displayAllSongs);
+                        List<Song> getSongFromList = playListRepository.getSongFromList(playListIds, displayAllSong);
                         songRepository.displayFormat(getSongFromList);
                     }
                     System.out.println("If you want to play song then press (Y/N)");
@@ -194,13 +168,14 @@ public class Main {
                         break;
                     }
                 case 6:
+                    System.out.println("Sorted list");
+                    List<Song> songList = songRepository.sortSongs(displayAllSong);
+                    songRepository.displayFormat(songList);
+                case 7:
                     System.out.println("Successful Exit");
                     System.out.println("--------------------------------------------------------------------------");
-                default:
-                    System.out.println("Enter a valid option");
-            }
-            break;
-        } while (task < 6);
-    }
 
+            }
+        } while (task < 7);
+    }
 }

@@ -22,6 +22,12 @@ public class DatabaseService {
 
 
     // Create a connection object using the driverManager class
+
+    /**
+     * It creates a connection to the database using the URL, username, and password
+     *
+     * @return A connection to the database.
+     */
     public Connection connect() {
         try {
             databaseConnection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
@@ -33,6 +39,13 @@ public class DatabaseService {
     }
 
     // check connection
+
+    /**
+     * If the databaseConnection is equal to the connect() function, then print "Connected to the database", otherwise
+     * print "Not connected to the database"
+     *
+     * @return Boolean
+     */
     public Boolean printConnectionStatus() {
 
         if (databaseConnection == connect()) {
